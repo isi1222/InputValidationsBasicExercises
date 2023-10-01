@@ -6,19 +6,29 @@ namespace ValidateTheNameWebApplication.Controllers
     {
         [HttpGet]
         public IActionResult Index(){
-            return View("Index",false);
+            return View(
+                "Index",
+                new
+                {
+                    nameIsValid = false,
+                    showNameEvaluation = false
+                });
         }
 
         [HttpPost]
         public IActionResult ValidateName(string name) { 
-            bool nameIsValid = NameIsValid(name);
-            return View("Index",nameIsValid);
+            bool nameValidationResult = NameIsValid(name);
+            return View(
+                "Index",
+                new
+                {
+                    nameIsValid = nameValidationResult,
+                    showNameEvaluation = true
+                });
         }
 
         private Boolean NameIsValid(string name){
-            //Insert logic here
-            if(name.Length < 4)
-                return false;
+            //Insert logic for name validation here, and return the correct boolean value true/false
             return true;
         }
     }
