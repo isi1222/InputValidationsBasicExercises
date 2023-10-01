@@ -1,0 +1,13 @@
+﻿@Model 
+
+    <div style="display:flex; justify-content: center;">
+        <form asp-controller="Name" asp-action="ValidateName" method="post">
+            <input type="text" name="name">
+            <input type="submit">
+        </form>
+    @if(@Model){
+        <h1 style="color:green;">Name is valid</h1>
+    }else{
+        <h1 style="color:red;">Name is invalid</h1>
+    }
+</div>
