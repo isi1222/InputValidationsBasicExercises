@@ -14,12 +14,12 @@
             this.lastName = lastName;
         }
 
-        private void isFirstNameValid(string firstname)
+        private void isFirstNameValid(string name)
         {
             ///Add Invariance validation Here
             /// Throw an Exception if the name is invalid
         }
-        private void isLastNameValid(string lastname)
+        private void isLastNameValid(string name)
         {
             ///Add Invariance validation Here
             /// Throw an Exception if the name is invalid
