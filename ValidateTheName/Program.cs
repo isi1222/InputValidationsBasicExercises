@@ -11,7 +11,7 @@ namespace ValidateTheName
                 Console.WriteLine("Please input you name:");
                 string nameInput = Console.ReadLine();
 
-                if (nameInputIsInvalid(nameInput))
+                if (nameInputIsvalid(nameInput))
                 {
                     Console.WriteLine($"The name {nameInput} is a valid name");
                 }
@@ -23,7 +23,7 @@ namespace ValidateTheName
             }
         }
 
-        static bool nameInputIsInvalid(string? nameInput)
+        static bool nameInputIsvalid(string? nameInput)
         {
              //insert validation code here.
             return true;
